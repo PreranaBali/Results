@@ -1,0 +1,90 @@
+/* ===========================
+   Find scale CSS 
+============================= */
+.find-scale-section {
+    &__text {
+        p{
+            margin: 24px 0 40px;
+        }
+        ul {
+            display: grid;
+            gap: 8px; 
+            margin-bottom: 45px;
+            li {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-family: var(--title-font);
+                font-weight: 700;
+                color: hsl(var(--white)/.7);
+                &::before {
+                    content: "\f00c";
+                    font-weight: 900;
+                    font-family: "Font Awesome 6 free";
+                    background: var(--base-gradient);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+        .btn-border{
+            display: inline-flex;
+        }
+    }
+    &__img{
+        .finde-image{
+            background: var(--base-gradient2);
+            padding: 1.5px;
+            border-radius: 7px;
+            overflow: hidden;
+            img{
+                width: 100%;
+                border-radius: 7px;
+            }
+            video{
+                border-radius: 7px
+            }
+        }
+        .find-list{
+            li{
+                @include fs-14;
+            }
+        }
+        ul{
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+            margin: 30px 0 0;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            li{
+                text-transform: capitalize;
+                display: flex;
+                align-items: center;
+                gap:7px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+                @include fs-16;
+                &:hover{
+                    color: hsl(var(--base));
+                    font-weight: 600;
+                }
+                i{
+                    background: var(--base-gradient);
+                    color: hsl(var(--white));
+                    border-radius: 100px;
+                    padding: 4px;
+                    @include fs-16;
+                }
+                .btn-border{
+                    padding: 5px 10px;
+                    @include fs-14;
+                    font-weight: 500;
+                    
+                }
+            }
+        }
+    }
+}

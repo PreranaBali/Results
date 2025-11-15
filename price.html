@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title -->
+  <title></title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/logo/favicon.ico">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">  
+  <!-- swiper -->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <!-- Odometer -->
+  <link rel="stylesheet" href="assets/css/odometer.css">    
+  <!-- custom animation -->
+  <link rel="stylesheet" href="assets/css/custom-animation.css">
+   
+  <!-- Main css -->
+  <link rel="stylesheet" href="assets/css/main.css">
+ 
+</head>
+
+<body> 
+  <!-- ===========================
+  =====>> Cursor-effect <<======= -->
+  <div class="cursor"></div>
+  <div class="cursor-trail"></div>
+  <!-- =====>> End Cursor-effect <<=====
+  =========================== -->
+
+  <!-- ===========================
+  =====>> Scroll back to top <<===== -->
+  <div class="progress-wrap">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+  </div>
+  <!-- =====>> End Scroll back to top <<===== 
+  =========================== -->
+  
+  <!--==================== 
+    Preloader
+====================-->
+<div id="preloader">
+    <svg class="wave_animation" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 38.05">
+        <path class="line_1" data-name="Line 1" d="M0.91,15L0.78,15A1,1,0,0,0,0,16v6a1,1,0,1,0,2,0s0,0,0,0V16a1,1,0,0,0-1-1H0.91Z"></path>
+        <path class="line_2" data-name="Line 2" d="M6.91,9L6.78,9A1,1,0,0,0,6,10V28a1,1,0,1,0,2,0s0,0,0,0V10A1,1,0,0,0,7,9H6.91Z"></path>
+        <path class="line_3" data-name="Line 3" d="M12.91,0L12.78,0A1,1,0,0,0,12,1V37a1,1,0,1,0,2,0s0,0,0,0V1a1,1,0,0,0-1-1H12.91Z"></path>
+        <path class="line_4" data-name="Line 4" d="M18.91,10l-0.12,0A1,1,0,0,0,18,11V27a1,1,0,1,0,2,0s0,0,0,0V11a1,1,0,0,0-1-1H18.91Z"></path>
+        <path class="line_5" data-name="Line 5" d="M24.91,15l-0.12,0A1,1,0,0,0,24,16v6a1,1,0,0,0,2,0s0,0,0,0V16a1,1,0,0,0-1-1H24.91Z"></path>
+        <path class="line_6" data-name="Line 6" d="M30.91,10l-0.12,0A1,1,0,0,0,30,11V27a1,1,0,1,0,2,0s0,0,0,0V11a1,1,0,0,0-1-1H30.91Z"></path>
+        <path class="line_7" data-name="Line 7" d="M36.91,0L36.78,0A1,1,0,0,0,36,1V37a1,1,0,1,0,2,0s0,0,0,0V1a1,1,0,0,0-1-1H36.91Z"></path>
+        <path class="line_8" data-name="Line 8" d="M42.91,9L42.78,9A1,1,0,0,0,42,10V28a1,1,0,1,0,2,0s0,0,0,0V10a1,1,0,0,0-1-1H42.91Z"></path>
+        <path class="line_9" data-name="Line 9" d="M48.91,15l-0.12,0A1,1,0,0,0,48,16v6a1,1,0,1,0,2,0s0,0,0,0V16a1,1,0,0,0-1-1H48.91Z"></path>
+    </svg>
+</div>
+<!--==================== 
+    Preloader End 
+====================-->
+  
+ 
+
+<main>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <!-- ===========================
+=====>> navbar <<===== -->
+<nav class="navbar navbar-expand-lg navbar-one">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/images/logo/logo.svg" alt="logo" class="logo-img">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="animated-svg">
+                <path class="line line-1" d="m2.5 6.5h18" fill="none" stroke="#fff" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                <path class="line line-2" d="m2.5 11.5h18" fill="none" stroke="#fff" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                <path class="line line-3" d="m2.5 16.5h18" fill="none" stroke="#fff" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                    <img src="assets/images/logo/logo.svg" alt="logo" class="logo-img">
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body align-items-center">
+                <div class="right-nav">
+                    <div class="country__select dropdown">
+                        <button class="country__select_button" data-bs-toggle="dropdown" aria-expanded="false"
+                            id="countryDropdown">
+                            <img src="assets/images/country-logo/united-states.png" alt="country logo" class="img-flag" id="dropdownImage">
+                            EN
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li data-text="EN" data-img="assets/images/country-logo/united-states.png">
+                                <img src="assets/images/country-logo/united-states.png" alt="country logo" class="img-flag"> EN
+                            </li>
+                            <li data-text="UK" data-img="assets/images/country-logo/united-kingdom.png">
+                                <img src="assets/images/country-logo/united-kingdom.png" alt="country logo" class="img-flag"> UK
+                            </li>
+                            <li data-text="GER" data-img="assets/images/country-logo/germany.png">
+                                <img src="assets/images/country-logo/germany.png" alt="country logo" class="img-flag"> GER
+                            </li>
+                            <li data-text="CA" data-img="assets/images/country-logo/canada.png">
+                                <img src="assets/images/country-logo/canada.png" alt="country logo" class="img-flag"> CA
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="login.html" class="btn-border">
+                        Sign up <i class="material-symbols-outlined">east</i>
+                    </a>
+                </div>
+                <ul class="navbar-nav justify-content-center flex-grow-1">
+                    
+<li class="nav-item">
+    <a class="nav-link" href="index.html"><span>Home</span></a>
+</li>   
+<li class="nav-item">
+    <a class="nav-link" href="about.html"><span>About Us</span></a>
+</li>    
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+        Use Case 
+    </a>
+    <ul class="dropdown-menu fade-down"> 
+        <li><a class="dropdown-item" href="case.html">Use Case</a></li>  
+        <li><a class="dropdown-item" href="case-details.html">Case Details</a></li>  
+    </ul>
+</li> 
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+        Pages 
+    </a>
+    <ul class="dropdown-menu fade-down"> 
+        <li><a class="dropdown-item" href="faq.html">Faq</a></li>  
+        <li><a class="dropdown-item" href="login.html">Login</a></li>   
+        <li><a class="dropdown-item" href="register.html">Register</a></li>
+        <li><a class="dropdown-item" href="reset-password.html">Reset Pass</a></li>
+        <li><a class="dropdown-item" href="review.html">Review</a></li>
+        <li><a class="dropdown-item" href="price.html">Pricing List</a></li>
+        <li><a class="dropdown-item" href="your-voice.html">Your Voice </a></li>
+        <li><a class="dropdown-item" href="404.html">404</a></li>
+    </ul>
+</li> 
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+        Blog
+    </a>
+    <ul class="dropdown-menu fade-down"> 
+        <li><a class="dropdown-item" href="blog.html">Blog List</a></li>
+        <li><a class="dropdown-item" href="blog-details.html">Blog Details</a></li>   
+    </ul>
+</li> 
+<li class="nav-item">
+    <a class="nav-link" href="contact.html"><span>Contacts</span></a>
+</li> 
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- =====>> End navbar <<===== 
+=========================== -->
+            <!-- ===========================
+=====>> breadcrumb <<======= -->
+<section class="breadcrumb">
+    <!-- <img class="banner-shape" src="assets/images/shape/banner.png" alt="shape"> -->
+    <div class="banner-shapes">
+        <img src="assets/images/shape/wave1.png" alt="wave" class="img-fluid">
+        <img src="assets/images/shape/wave2.png" alt="wave" class="img-fluid">
+        <img src="assets/images/shape/wave3.png" alt="wave" class="img-fluid">
+    </div>
+    <div class="container"> 
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="breadcrumb__wrapper">
+                    <h2 class="breadcrumb__title"> Price List</h2>
+                    <ul class="breadcrumb__list">
+                        <li class="breadcrumb__item">
+                            <a href="index.html"> Home</a> </li>
+                        <li class="breadcrumb__item">/</li>
+                        <li class="breadcrumb__item"> <span class="breadcrumb__item-text"> Price </span>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =====>> End breadcrumb <<===== 
+=============================== -->
+            <!-- ===========================
+=====>> Pricing <<======= -->
+<section class="pricing-section pb-120 pt-120">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading text-center">
+                    <h2 class="section-heading__title title-animation">Ready to Get Started? We'll <br class="d-none d-lg-block"> Keep You Under Budget</h2> 
+                </div>
+            </div>
+        </div>
+        <div class="row row-gap-4 mt-60 justify-content-center">
+            <div class="col-xl-4 col-lg-6 col-md-6 align-self-end fadeIn_pricing">
+                <div class="pricing-section__card ">
+                    <h5>Personal</h5>
+                    <p>This is our most affaroable
+                        plan to get started</p>
+                    <h3>$29.00 <sub>/Month</sub></h3>
+                    <hr>
+                    <ul>
+                        <li class="check">All Features in Creator</li>
+                        <li class="check">3 Localize Languages</li>
+                        <li class="check">5 Rapid Voice Clones</li>
+                        <li class="check">Upload Your Document</li>
+                        <li class="unCheck">Create custom voices</li>
+                        <li class="unCheck">Audio Editing</li>
+                    </ul>
+                    <a href="login.html" class="btn-border">
+                        Choose Plan
+                    </a> 
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 align-self-end fadeIn_pricing">
+                <div class="pricing-section__card">  
+                    <h5>Business</h5>
+                    <p>This is our most affaroable
+                        plan to get started</p>
+                    <h3>$49.00 <sub>/Month</sub></h3>
+                    <hr>
+                    <ul>
+                        <li class="check">All Features in Creator</li>
+                        <li class="check">10 Localize Languages</li>
+                        <li class="check">6 Rapid Voice Clones</li>
+                        <li class="check">Upload Your Document</li>
+                        <li class="check">Create custom voices</li>
+                        <li class="unCheck">Audio Editing</li>
+                    </ul>
+                    <a href="login.html" class="btn-border">
+                        Choose Plan
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 align-self-end fadeIn_pricing">
+                <div class="pricing-section__card">
+                    <h5>Enterprise</h5>
+                    <p>This is our most affaroable
+                        plan to get started</p>
+                    <h3>$69.00 <sub>/Month</sub></h3>
+                    <hr>
+                    <ul>
+                        <li class="check">All Features in Creator</li>
+                        <li class="check">50 Localize Languages</li>
+                        <li class="check">30 Rapid Voice Clones</li>
+                        <li class="check">Upload Your Document</li>
+                        <li class="check">Create custom voices</li>
+                        <li class="check">Audio Editing</li>
+                    </ul>
+                    <a href="login.html" class="btn-border">
+                        Choose Plan 
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =====>> End Pricing <<=====
+=========================== -->  
+            <!-- ===========================
+=====>> Testimonial <<======= -->
+<section class="testimonial-section py-120 pt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading text-center">
+                    <h2 class="section-heading__title title-animation">See why 500,000+ professionals
+                        <br class="d-none d-lg-block"> like you have chosen OpenAi
+                    </h2>
+                    <p class="section-heading__desc mt-3 animate-3d">Top-rated on Trustpilot, G2, and AppSumo</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-60">
+            <div class="col-lg-12 fadeDown_testimonial">
+                <div class="swiper testimonial-slide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-slide__item">
+                                <div class="slid-img">
+                                    <img src="assets/images/user/t1.png" alt="feedback">
+                                </div>
+                                <div class="slid-text">
+                                    <div class="rating">
+                                        <i class="material-symbols-outlined">star</i>
+                                        <i class="material-symbols-outlined">star</i>
+                                        <i class="material-symbols-outlined">star</i>
+                                        <i class="material-symbols-outlined">star</i>
+                                        <i class="material-symbols-outlined">star</i>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, nsectadipiscinelit. Quisque sed urna tortor. Cras in
+                                        ex tempus metus quis elit tristique, vel tristique</p>
+                                    <div class="user-name">
+                                        <h5>Walter Anthony</h5>
+                                        <p>CEO,Google</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-slide__item">
+                                <div class="slid-img">
+                                    <img src="assets/images/user/t2.png" alt="feedback">
+                                </div>
+                                <div class="slid-text">
+                                    <div class="rating">
+                                        <i class="material-symbols-outlined">star</i>
+                                        <i class="material-symbols-outlined">star</i>
+                                        <i class="material-symbols-outlined">star</i>
+                                        <i class="material-symbols-outlined">star</i>
+                                        <i class="material-symbols-outlined">star</i>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, nsectadipiscinelit. Quisque sed urna tortor. Cras in
+                                        ex tempus metus quis elit tristique, vel tristique</p>
+                                    <div class="user-name">
+                                        <h5>Francis Catanzaro</h5>
+                                        <p>CEO,Monosnap</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-slide__item">
+                                <div class="slid-img">
+                                    <img src="assets/images/user/t1.png" alt="feedback">
+                                </div>
+                                <div class="slid-text">
+                                    <div class="rating">
+                                        <i class="material-symbols-outlined">star</i>
+                                        <i class="material-symbols-outlined">star</i>
+                                        <i class="material-symbols-outlined">star</i>
+                                        <i class="material-symbols-outlined">star</i>
+                                        <i class="material-symbols-outlined">star</i>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, nsectadipiscinelit. Quisque sed urna tortor. Cras in
+                                        ex tempus metus quis elit tristique, vel tristique</p>
+                                    <div class="user-name">
+                                        <h5>Walter J. Anthony</h5>
+                                        <p>CEO,Google</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-slide__item">
+                                <div class="slid-img">
+                                    <img src="assets/images/user/t3.png" alt="feedback">
+                                </div>
+                                <div class="slid-text">
+                                    <div class="rating">
+                                        <i class="material-symbols-outlined">star</i>
+                                        <i class="material-symbols-outlined">star</i>
+                                        <i class="material-symbols-outlined">star</i>
+                                        <i class="material-symbols-outlined">star</i>
+                                        <i class="material-symbols-outlined">star</i>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, nsectadipiscinelit. Quisque sed urna tortor. Cras in
+                                        ex tempus metus quis elit tristique, vel tristique</p>
+                                    <div class="user-name">
+                                        <h5>Terry T. Mathias </h5> 
+                                        <p>CEO,Facebook</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =====>> End Testimonial <<=====
+=========================== --> 
+            <!-- ===========================
+=====>> CallToAction <<======= -->
+<section class="callToAction-section pb-120">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="callToAction-section__content animate-3d">
+                    <h2>Start Creating A Custom Voice For Your Brand Today</h2>
+                    <a href="contact.html" class="btn-border btn-fill">
+                        Ai Voice Over  <i class="material-symbols-outlined">east</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =====>> End CallToAction <<=====
+=========================== --> 
+            <!-- ===========================
+=====>> footer <<===== -->
+<footer class="footer-area"> 
+    <div class="container py-120">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="footer-area__about">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo/logo.svg" alt="logo">
+                        </a>
+                    </div>
+                    <br>
+                    <p>Once you know your audience, choose a topic that will resonate with them. Look for trending topics in your</p>
+                    <ul class="social">
+                        <li>
+                            <a href="#" >
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" >
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" >
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" >
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="footer-widget">
+                    <div class="footer-widget__item">
+                        <h4 class="footer-widget__title">
+                            Company
+                        </h4>
+                        <ul class="footer-widget__list">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="blog.html">Community</a></li>
+                            <li><a href="services.html">Career’s</a></li>
+                            <li><a href="contact.html">Affiliate Program</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget__item">
+                        <h4 class="footer-widget__title">
+                            Use Cases
+                        </h4>
+                        <ul class="footer-widget__list">
+                            <li><a href="team.html">For Terms</a></li>
+                            <li><a href="services.html">For Email Marketers</a></li>
+                            <li><a href="blog.html">For Blog Writers</a></li>
+                            <li><a href="services.html">For Social Manager</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget__item">
+                        <h4 class="footer-widget__title">
+                            Get Updates!
+                        </h4>
+                        <div class="footer-widget__list">
+                            <p >Sign up for latest news & articles. We won’t give you spam mails.</p>
+                            <form action="/template/audiq/" method="post" autocomplete="off">
+                                <input type="email" name="email" placeholder="Enter your Email" required>
+                                <button type="submit"> 
+                                    <i class="material-symbols-outlined"> arrow_forward_ios </i>
+                                </button> 
+                            </form>
+                             
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copy-right">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="copy-right__content">
+                        <p class="copy-right__text">
+                            © 2025. <a href="index.html">AudiQ,</a> All Rights Reserved.
+                        </p>
+                        <ul class="copy-right__url">
+                            <li><a href="contact.html">Terms</a></li>
+                            <li><a href="contact.html">Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- =====>> End footer <<=====
+=========================== -->
+        </div>
+    </div>
+</main>
+<!-- Jquery js -->
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<!-- Gsap -->
+<script src="assets/js/gsap.min.js"></script> 
+<!-- Scroll Trigger -->
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<!-- Scroll To Plugin -->
+<script src="assets/js/ScrollToPlugin.min.js"></script>
+<!-- Split Text -->
+<script src="assets/js/SplitText.min.js"></script>
+<!-- Bootstrap Bundle Js -->
+<script src="assets/js/boostrap.bundle.min.js"></script> 
+<!-- swiper js -->
+<script src="assets/js/swiper-bundle.min.js"></script>
+<!-- Odometer js -->
+<script src="assets/js/odometer.min.js"></script>
+<!-- main js -->
+<script src="assets/js/main.js"></script> 
+
+
+</body>
+
+</html>

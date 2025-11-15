@@ -1,0 +1,50 @@
+/* ================================= 
+    Preloader Css 
+=================================== */ 
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(var(--black) / .9);  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease;  
+  backdrop-filter: blur(10px);
+  .wave_animation{
+    width: 120px;
+    height: 120px;
+    fill: hsl(var(--white));
+     
+  }
+}
+
+/* Logo animation styling */
+#preloader img {
+  width: 100px; /* Adjust size as needed */
+  animation: pulse 1.5s ease-in-out infinite, fade 1.5s ease-in-out infinite alternate;
+}
+
+/* Scale (pulse) animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Adjust scale intensity */
+  }
+}
+
+/* Fade effect */
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5; /* Adjust fade intensity */
+  }
+}

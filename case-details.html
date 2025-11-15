@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title -->
+  <title>AudiQ - Voice AI Solutions html template</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/logo/favicon.ico">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">  
+  <!-- swiper -->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <!-- Odometer -->
+  <link rel="stylesheet" href="assets/css/odometer.css">    
+  <!-- custom animation -->
+  <link rel="stylesheet" href="assets/css/custom-animation.css">
+   
+  <!-- Main css -->
+  <link rel="stylesheet" href="assets/css/main.css">
+ 
+</head>
+
+<body> 
+  <!-- ===========================
+  =====>> Cursor-effect <<======= -->
+  <div class="cursor"></div>
+  <div class="cursor-trail"></div>
+  <!-- =====>> End Cursor-effect <<=====
+  =========================== -->
+
+  <!-- ===========================
+  =====>> Scroll back to top <<===== -->
+  <div class="progress-wrap">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+  </div>
+  <!-- =====>> End Scroll back to top <<===== 
+  =========================== -->
+  
+  <!--==================== 
+    Preloader
+====================-->
+<div id="preloader">
+    <svg class="wave_animation" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 38.05">
+        <path class="line_1" data-name="Line 1" d="M0.91,15L0.78,15A1,1,0,0,0,0,16v6a1,1,0,1,0,2,0s0,0,0,0V16a1,1,0,0,0-1-1H0.91Z"></path>
+        <path class="line_2" data-name="Line 2" d="M6.91,9L6.78,9A1,1,0,0,0,6,10V28a1,1,0,1,0,2,0s0,0,0,0V10A1,1,0,0,0,7,9H6.91Z"></path>
+        <path class="line_3" data-name="Line 3" d="M12.91,0L12.78,0A1,1,0,0,0,12,1V37a1,1,0,1,0,2,0s0,0,0,0V1a1,1,0,0,0-1-1H12.91Z"></path>
+        <path class="line_4" data-name="Line 4" d="M18.91,10l-0.12,0A1,1,0,0,0,18,11V27a1,1,0,1,0,2,0s0,0,0,0V11a1,1,0,0,0-1-1H18.91Z"></path>
+        <path class="line_5" data-name="Line 5" d="M24.91,15l-0.12,0A1,1,0,0,0,24,16v6a1,1,0,0,0,2,0s0,0,0,0V16a1,1,0,0,0-1-1H24.91Z"></path>
+        <path class="line_6" data-name="Line 6" d="M30.91,10l-0.12,0A1,1,0,0,0,30,11V27a1,1,0,1,0,2,0s0,0,0,0V11a1,1,0,0,0-1-1H30.91Z"></path>
+        <path class="line_7" data-name="Line 7" d="M36.91,0L36.78,0A1,1,0,0,0,36,1V37a1,1,0,1,0,2,0s0,0,0,0V1a1,1,0,0,0-1-1H36.91Z"></path>
+        <path class="line_8" data-name="Line 8" d="M42.91,9L42.78,9A1,1,0,0,0,42,10V28a1,1,0,1,0,2,0s0,0,0,0V10a1,1,0,0,0-1-1H42.91Z"></path>
+        <path class="line_9" data-name="Line 9" d="M48.91,15l-0.12,0A1,1,0,0,0,48,16v6a1,1,0,1,0,2,0s0,0,0,0V16a1,1,0,0,0-1-1H48.91Z"></path>
+    </svg>
+</div>
+<!--==================== 
+    Preloader End 
+====================-->
+  
+ 
+
+<main>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <!-- ===========================
+=====>> navbar <<===== -->
+<nav class="navbar navbar-expand-lg navbar-one">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/images/logo/logo.svg" alt="logo" class="logo-img">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="animated-svg">
+                <path class="line line-1" d="m2.5 6.5h18" fill="none" stroke="#fff" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                <path class="line line-2" d="m2.5 11.5h18" fill="none" stroke="#fff" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                <path class="line line-3" d="m2.5 16.5h18" fill="none" stroke="#fff" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                    <img src="assets/images/logo/logo.svg" alt="logo" class="logo-img">
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body align-items-center">
+                <div class="right-nav">
+                    <div class="country__select dropdown">
+                        <button class="country__select_button" data-bs-toggle="dropdown" aria-expanded="false"
+                            id="countryDropdown">
+                            <img src="assets/images/country-logo/united-states.png" alt="country logo" class="img-flag" id="dropdownImage">
+                            EN
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li data-text="EN" data-img="assets/images/country-logo/united-states.png">
+                                <img src="assets/images/country-logo/united-states.png" alt="country logo" class="img-flag"> EN
+                            </li>
+                            <li data-text="UK" data-img="assets/images/country-logo/united-kingdom.png">
+                                <img src="assets/images/country-logo/united-kingdom.png" alt="country logo" class="img-flag"> UK
+                            </li>
+                            <li data-text="GER" data-img="assets/images/country-logo/germany.png">
+                                <img src="assets/images/country-logo/germany.png" alt="country logo" class="img-flag"> GER
+                            </li>
+                            <li data-text="CA" data-img="assets/images/country-logo/canada.png">
+                                <img src="assets/images/country-logo/canada.png" alt="country logo" class="img-flag"> CA
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="login.html" class="btn-border">
+                        Sign up <i class="material-symbols-outlined">east</i>
+                    </a>
+                </div>
+                <ul class="navbar-nav justify-content-center flex-grow-1">
+                    
+<li class="nav-item">
+    <a class="nav-link" href="index.html"><span>Home</span></a>
+</li>   
+<li class="nav-item">
+    <a class="nav-link" href="about.html"><span>About Us</span></a>
+</li>    
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+        Use Case 
+    </a>
+    <ul class="dropdown-menu fade-down"> 
+        <li><a class="dropdown-item" href="case.html">Use Case</a></li>  
+        <li><a class="dropdown-item" href="case-details.html">Case Details</a></li>  
+    </ul>
+</li> 
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+        Pages 
+    </a>
+    <ul class="dropdown-menu fade-down"> 
+        <li><a class="dropdown-item" href="faq.html">Faq</a></li>  
+        <li><a class="dropdown-item" href="login.html">Login</a></li>   
+        <li><a class="dropdown-item" href="register.html">Register</a></li>
+        <li><a class="dropdown-item" href="reset-password.html">Reset Pass</a></li>
+        <li><a class="dropdown-item" href="review.html">Review</a></li>
+        <li><a class="dropdown-item" href="price.html">Pricing List</a></li>
+        <li><a class="dropdown-item" href="your-voice.html">Your Voice </a></li>
+        <li><a class="dropdown-item" href="404.html">404</a></li>
+    </ul>
+</li> 
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+        Blog
+    </a>
+    <ul class="dropdown-menu fade-down"> 
+        <li><a class="dropdown-item" href="blog.html">Blog List</a></li>
+        <li><a class="dropdown-item" href="blog-details.html">Blog Details</a></li>   
+    </ul>
+</li> 
+<li class="nav-item">
+    <a class="nav-link" href="contact.html"><span>Contacts</span></a>
+</li> 
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- =====>> End navbar <<===== 
+=========================== -->
+            <!-- ===========================
+=====>> breadcrumb <<======= -->
+<section class="breadcrumb">
+    <!-- <img class="banner-shape" src="assets/images/shape/banner.png" alt="shape"> -->
+    <div class="banner-shapes">
+        <img src="assets/images/shape/wave1.png" alt="wave" class="img-fluid">
+        <img src="assets/images/shape/wave2.png" alt="wave" class="img-fluid">
+        <img src="assets/images/shape/wave3.png" alt="wave" class="img-fluid">
+    </div>
+    <div class="container"> 
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="breadcrumb__wrapper">
+                    <h2 class="breadcrumb__title"> E-learning</h2>
+                    <ul class="breadcrumb__list">
+                        <li class="breadcrumb__item">
+                            <a href="index.html"> Home</a> </li>
+                        <li class="breadcrumb__item">/</li>
+                        <li class="breadcrumb__item"> <span class="breadcrumb__item-text"> Use Cases </span>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =====>> End breadcrumb <<===== 
+=============================== -->
+            <!-- ===========================
+            =====>> Services <<======= -->
+            <section class="blog-section py-120">
+                <div class="container">
+                    <div class="row row-gap-4"> 
+                        <div class="col-lg-8">
+                            <div class="blog-details-content"> 
+                                <h3 class="title-animation mt-0">
+                                    <i class="flaticon-online-learning"></i>
+                                    E-learning success stories that inspire
+                                </h3> 
+                                <p>Consectetur Adipiscing Elit. Etiam At Mauris Accumsan Mi Pulvinar Lacinia A In Justo.
+                                    Ut Tempor Et Libero Quis
+                                    Dignissim. Nulla At Convallis Libero, Vitae Aliquam Leo. Etiam Ut Augue Nibh. In
+                                    Laoreet Neque Quis Ex Ornare,
+                                    Quis Auctor Elit Facilisis. Mauris Dapibus Massa Rhoncus Ligula Luctus Vulputate.
+                                    Fusce Condimentum Placerat
+                                    Vulputate. Praesent Ullamcorper Dui In Dui Sagittis Commodo.</p>
+                                <h4 class="title-animation">Where Can I Get Some?</h4>
+                                <div class="blog-details-content__grid">
+                                    <img src="assets/images/others/services1.jpg" alt="blog">
+                                    <img src="assets/images/others/services2.jpg" alt="blog"> 
+                                </div> 
+                                <br>
+                                <p>Proin Ultricies Ultricies Est Vitae Cursus. Nulla Sit Amet Suscipit Tortor. Maecenas
+                                    Dui Erat, Ornare Eget
+                                    Tristique Vitae, Rutrum Pretium Justo. Phasellus Vitae Consequat Nisi, Quis Luctus
+                                    Nisl. Praesent Faucibus Sem
+                                    Id Massa Semper Ornare. Nam Eu Magna At Mi Pellentesque Mattis. Morbi At Condimentum
+                                    Velit. Phasellus Aliquet,
+                                    Leo Auctor Volutpat Ultrices, Metus Dolor Dictum Enim, Sed Convallis Lacus Urna Nec
+                                    Erat.</p>
+                                <br>
+                                <ul class="blog-lists">
+                                    <li>Mauris Maximus Diam Ac Imperdiet Dictum.</li>
+                                    <li>Maecenas Eget Ipsum Dapibus, Rutrum Mi Non, Ultricies Massa.</li>
+                                    <li>Nam Non Purus Porta Risus Tincidunt Cursus.</li>
+                                    <li>Quisque Blandit Lacus Vel Urna Pellentesque Mattis.</li>
+                                    <li>Maecenas Vehicula Tortor Et Consectetur Faucibus.</li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="row row-gap-4 ms-xl-3">
+                                <div class="col-12">
+                                    <div class="sidebar-item">
+                                        <h4>Our Services</h4>
+                                        <ul class="category-list">
+                                            <li><a href="blog.html">Save Money</a></li>
+                                            <li><a href="blog.html">Business Audit</a></li>
+                                            <li><a href="blog.html">Digital Solutions</a></li>
+                                            <li><a href="blog.html">HR Consulting</a></li>
+                                            <li><a href="blog.html">Human Research</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="sidebar-item">
+                                        <h4>Download</h4>
+                                        <ul class="download-sidebar">
+                                            <li>
+                                                <a href="assets/music/faded.mp3" download>
+                                                    Brochure
+                                                    <i class="material-symbols-outlined"> download </i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="assets/music/faded.mp3" download>
+                                                    Company Details
+                                                    <i class="material-symbols-outlined"> download </i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="sidebar-item talk">
+                                        <h3>Let’s Talk</h3>
+                                        <p>Call for anytime if
+                                            emergency</p>
+                                        <a href="contact.html" class="btn-border">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- =====>> End Services <<=====
+            =========================== -->
+            <!-- ===========================
+=====>> footer <<===== -->
+<footer class="footer-area"> 
+    <div class="container py-120">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="footer-area__about">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo/logo.svg" alt="logo">
+                        </a>
+                    </div>
+                    <br>
+                    <p>Once you know your audience, choose a topic that will resonate with them. Look for trending topics in your</p>
+                    <ul class="social">
+                        <li>
+                            <a href="#" >
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" >
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" >
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" >
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="footer-widget">
+                    <div class="footer-widget__item">
+                        <h4 class="footer-widget__title">
+                            Company
+                        </h4>
+                        <ul class="footer-widget__list">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="blog.html">Community</a></li>
+                            <li><a href="services.html">Career’s</a></li>
+                            <li><a href="contact.html">Affiliate Program</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget__item">
+                        <h4 class="footer-widget__title">
+                            Use Cases
+                        </h4>
+                        <ul class="footer-widget__list">
+                            <li><a href="team.html">For Terms</a></li>
+                            <li><a href="services.html">For Email Marketers</a></li>
+                            <li><a href="blog.html">For Blog Writers</a></li>
+                            <li><a href="services.html">For Social Manager</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget__item">
+                        <h4 class="footer-widget__title">
+                            Get Updates!
+                        </h4>
+                        <div class="footer-widget__list">
+                            <p >Sign up for latest news & articles. We won’t give you spam mails.</p>
+                            <form action="/template/audiq/" method="post" autocomplete="off">
+                                <input type="email" name="email" placeholder="Enter your Email" required>
+                                <button type="submit"> 
+                                    <i class="material-symbols-outlined"> arrow_forward_ios </i>
+                                </button> 
+                            </form>
+                             
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copy-right">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="copy-right__content">
+                        <p class="copy-right__text">
+                            © 2025. <a href="index.html">AudiQ,</a> All Rights Reserved.
+                        </p>
+                        <ul class="copy-right__url">
+                            <li><a href="contact.html">Terms</a></li>
+                            <li><a href="contact.html">Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- =====>> End footer <<=====
+=========================== -->
+        </div>
+    </div>
+</main>
+<!-- Jquery js -->
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<!-- Gsap -->
+<script src="assets/js/gsap.min.js"></script> 
+<!-- Scroll Trigger -->
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<!-- Scroll To Plugin -->
+<script src="assets/js/ScrollToPlugin.min.js"></script>
+<!-- Split Text -->
+<script src="assets/js/SplitText.min.js"></script>
+<!-- Bootstrap Bundle Js -->
+<script src="assets/js/boostrap.bundle.min.js"></script> 
+<!-- swiper js -->
+<script src="assets/js/swiper-bundle.min.js"></script>
+<!-- Odometer js -->
+<script src="assets/js/odometer.min.js"></script>
+<!-- main js -->
+<script src="assets/js/main.js"></script> 
+
+
+</body>
+
+</html>

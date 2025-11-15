@@ -1,0 +1,562 @@
+/* ============================
+    00.01 Font Size css
+=============================== */
+.fs-10 {
+  @include fs-10;
+}
+
+.fs-11 {
+  @include fs-11;
+}
+
+.fs-12 {
+  @include fs-12;
+}
+
+.fs-13 {
+  @include fs-13;
+}
+
+.fs-14 {
+  @include fs-14;
+}
+
+.fs-15 {
+  @include fs-15;
+}
+
+.fs-16 {
+  @include fs-16;
+
+  @include lg-screen {
+    @include fs-15;
+  }
+}
+
+.fs-17 {
+  @include fs-17;
+
+  @include lg-screen {
+    @include fs-16;
+  }
+
+  @include sm-screen {
+    @include fs-15;
+  }
+}
+
+.fs-18 {
+  @include fs-18;
+
+  @include xl-screen {
+    @include fs-17;
+  }
+
+  @include sm-screen {
+    @include fs-16;
+  }
+}
+
+.fs-19 {
+  @include fs-19;
+
+  @include xl-screen {
+    @include fs-18;
+  }
+
+  @include sm-screen {
+    @include fs-17;
+  }
+}
+
+.fs-20 {
+  @include fs-20;
+
+  @include xl-screen {
+    @include fs-19;
+  }
+
+  @include sm-screen {
+    @include fs-18;
+  }
+}
+
+.fs-21 {
+  @include fs-21;
+
+  @include xl-screen {
+    @include fs-20;
+  }
+
+  @include sm-screen {
+    @include fs-19;
+  }
+}
+
+.fs-22 {
+  @include fs-22;
+
+  @include xl-screen {
+    @include fs-21;
+  }
+
+  @include sm-screen {
+    @include fs-20;
+  }
+}
+
+.fs-23 {
+  @include fs-23;
+
+  @include xl-screen {
+    @include fs-22;
+  }
+
+  @include sm-screen {
+    @include fs-21;
+  }
+}
+
+.fs-24 {
+  @include fs-24;
+
+  @include xl-screen {
+    @include fs-23;
+  }
+
+  @include sm-screen {
+    @include fs-22;
+  }
+}
+
+.fs-25 {
+  @include fs-25;
+
+  @include xl-screen {
+    @include fs-24;
+  }
+
+  @include sm-screen {
+    @include fs-23;
+  }
+}
+
+.fs-26 {
+  @include fs-26;
+
+  @include xl-screen {
+    @include fs-25;
+  }
+
+  @include sm-screen {
+    @include fs-24;
+  }
+}
+
+.fs-27 {
+  @include fs-27;
+
+  @include xl-screen {
+    @include fs-26;
+  }
+
+  @include sm-screen {
+    @include fs-25;
+  }
+}
+
+.fs-28 {
+  @include fs-28;
+
+  @include xl-screen {
+    @include fs-27;
+  }
+
+  @include sm-screen {
+    @include fs-26;
+  }
+}
+
+.fs-29 {
+  @include fs-29;
+
+  @include xl-screen {
+    @include fs-28;
+  }
+
+  @include sm-screen {
+    @include fs-27;
+  }
+}
+
+.fs-30 {
+  @include fs-30;
+
+  @include xl-screen {
+    @include fs-29;
+  }
+
+  @include sm-screen {
+    @include fs-28;
+  }
+}
+
+.fs-31 {
+  @include fs-31;
+
+  @include xl-screen {
+    @include fs-30;
+  }
+
+  @include sm-screen {
+    @include fs-29;
+  }
+}
+
+.fs-32 {
+  @include fs-32;
+
+  @include xl-screen {
+    @include fs-31;
+  }
+
+  @include sm-screen {
+    @include fs-30;
+  }
+}
+
+.fs-33 {
+  @include fs-33;
+
+  @include xl-screen {
+    @include fs-32;
+  }
+
+  @include sm-screen {
+    @include fs-31;
+  }
+}
+
+.fs-34 {
+  @include fs-34;
+
+  @include xl-screen {
+    @include fs-33;
+  }
+
+  @include sm-screen {
+    @include fs-32;
+  }
+}
+
+.fs-35 {
+  @include fs-35;
+
+  @include xl-screen {
+    @include fs-34;
+  }
+
+  @include sm-screen {
+    @include fs-33;
+  }
+}
+
+.fs-36 {
+  @include fs-36;
+
+  @include xl-screen {
+    @include fs-35;
+  }
+
+  @include sm-screen {
+    @include fs-34;
+  }
+}
+
+.fs-37 {
+  @include fs-37;
+
+  @include xl-screen {
+    @include fs-36;
+  }
+
+  @include sm-screen {
+    @include fs-35;
+  }
+}
+
+.fs-38 {
+  @include fs-38;
+
+  @include xl-screen {
+    @include fs-37;
+  }
+
+  @include sm-screen {
+    @include fs-36;
+  }
+}
+
+.fs-39 {
+  @include fs-39;
+
+  @include xl-screen {
+    @include fs-38;
+  }
+
+  @include sm-screen {
+    @include fs-37;
+  }
+}
+
+.fs-40 {
+  @include fs-40;
+
+  @include xl-screen {
+    @include fs-39;
+  }
+
+  @include sm-screen {
+    @include fs-38;
+  }
+}
+
+.fs-41 {
+  @include fs-41;
+
+  @include xl-screen {
+    @include fs-40;
+  }
+
+  @include sm-screen {
+    @include fs-39;
+  }
+}
+
+.fs-42 {
+  @include fs-42;
+
+  @include xl-screen {
+    @include fs-41;
+  }
+
+  @include sm-screen {
+    @include fs-40;
+  }
+}
+
+.fs-43 {
+  @include fs-43;
+
+  @include xl-screen {
+    @include fs-42;
+  }
+
+  @include sm-screen {
+    @include fs-41;
+  }
+}
+
+.fs-44 {
+  @include fs-44;
+
+  @include xl-screen {
+    @include fs-43;
+  }
+
+  @include sm-screen {
+    @include fs-42;
+  }
+}
+
+.fs-45 {
+  @include fs-45;
+
+  @include xl-screen {
+    @include fs-44;
+  }
+
+  @include sm-screen {
+    @include fs-43;
+  }
+}
+
+.fs-46 {
+  @include fs-46;
+
+  @include xl-screen {
+    @include fs-45;
+  }
+
+  @include sm-screen {
+    @include fs-44;
+  }
+}
+
+.fs-47 {
+  @include fs-47;
+
+  @include xl-screen {
+    @include fs-46;
+  }
+
+  @include sm-screen {
+    @include fs-45;
+  }
+}
+
+.fs-48 {
+  @include fs-48;
+
+  @include xl-screen {
+    @include fs-47;
+  }
+
+  @include sm-screen {
+    @include fs-46;
+  }
+}
+
+.fs-49 {
+  @include fs-49;
+
+  @include xl-screen {
+    @include fs-48;
+  }
+
+  @include sm-screen {
+    @include fs-47;
+  }
+}
+
+.fs-50 {
+  @include fs-50;
+
+  @include xl-screen {
+    @include fs-49;
+  }
+
+  @include sm-screen {
+    @include fs-48;
+  }
+}
+
+.fs-51 {
+  @include fs-51;
+
+  @include xl-screen {
+    @include fs-50;
+  }
+
+  @include sm-screen {
+    @include fs-49;
+  }
+}
+
+.fs-52 {
+  @include fs-52;
+
+  @include xl-screen {
+    @include fs-51;
+  }
+
+  @include sm-screen {
+    @include fs-50;
+  }
+}
+
+.fs-53 {
+  @include fs-53;
+
+  @include xl-screen {
+    @include fs-52;
+  }
+
+  @include sm-screen {
+    @include fs-51;
+  }
+}
+
+.fs-54 {
+  @include fs-54;
+
+  @include xl-screen {
+    @include fs-53;
+  }
+
+  @include sm-screen {
+    @include fs-52;
+  }
+}
+
+.fs-55 {
+  @include fs-55;
+
+  @include xl-screen {
+    @include fs-54;
+  }
+
+  @include sm-screen {
+    @include fs-53;
+  }
+}
+
+.fs-56 {
+  @include fs-56;
+
+  @include xl-screen {
+    @include fs-55;
+  }
+
+  @include sm-screen {
+    @include fs-54;
+  }
+}
+
+.fs-57 {
+  @include fs-57;
+
+  @include xl-screen {
+    @include fs-56;
+  }
+
+  @include sm-screen {
+    @include fs-55;
+  }
+}
+
+.fs-58 {
+  @include fs-58;
+
+  @include xl-screen {
+    @include fs-57;
+  }
+
+  @include sm-screen {
+    @include fs-56;
+  }
+}
+
+.fs-59 {
+  @include fs-59;
+
+  @include xl-screen {
+    @include fs-58;
+  }
+
+  @include sm-screen {
+    @include fs-57;
+  }
+}
+
+.fs-60 {
+  @include fs-60;
+
+  @include xl-screen {
+    @include fs-59;
+  }
+
+  @include sm-screen {
+    @include fs-58;
+  }
+}

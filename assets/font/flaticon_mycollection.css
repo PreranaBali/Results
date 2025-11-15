@@ -1,0 +1,62 @@
+/*!
+*    ______ _       _   _
+*    |  ____| |     | | (_)
+*    | |__  | | __ _| |_ _  ___ ___  _ __
+*    |  __| | |/ _` | __| |/ __/ _ \| '_ \
+*    | |    | | (_| | |_| | (_| (_) | | | |
+*    |_|    |_|\__,_|\__|_|\___\___/|_| |_|
+*
+*         https://www.flaticon.com
+*/
+
+@font-face {
+    font-family: "flaticon_mycollection";
+    src: url("./flaticon_mycollection.woff2?e50503e6b70340463b8e7cf97ad7c624") format("woff2"),
+url("./flaticon_mycollection.woff?e50503e6b70340463b8e7cf97ad7c624") format("woff"),
+url("./flaticon_mycollection.eot?e50503e6b70340463b8e7cf97ad7c624#iefix") format("embedded-opentype"),
+url("./flaticon_mycollection.ttf?e50503e6b70340463b8e7cf97ad7c624") format("truetype"),
+url("./flaticon_mycollection.svg?e50503e6b70340463b8e7cf97ad7c624#flaticon_mycollection") format("svg")
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_mycollection !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-youtube:before {
+    content: "\f101";
+}
+.flaticon-ivr:before {
+    content: "\f102";
+}
+.flaticon-online-learning:before {
+    content: "\f103";
+}
+.flaticon-speech-synthesis:before {
+    content: "\f104";
+}
+.flaticon-translation:before {
+    content: "\f105";
+}
+.flaticon-voice-control:before {
+    content: "\f106";
+}
+.flaticon-text-to-speech:before {
+    content: "\f107";
+}
+.flaticon-megaphone:before {
+    content: "\f108";
+}
+.flaticon-audio-book:before {
+    content: "\f109";
+}
+.flaticon-video:before {
+    content: "\f10a";
+}
+

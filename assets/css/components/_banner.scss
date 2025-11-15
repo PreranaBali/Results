@@ -1,0 +1,244 @@
+/* ============================
+    Banner css
+=============================== */
+.banner-section {
+    position: relative;
+    z-index: 1;
+    padding: 150px 0 0;
+    overflow: hidden;
+
+    @include sm-screen{
+        padding-top: 110px;
+    }
+
+    &__img {
+        display: flex;
+        align-items: end;
+        position: relative;
+        @include md-screen{
+            width: 380px;
+            margin: 50px auto 0;
+        }
+        @include sm-screen{
+            width: 300px;
+        }
+
+        .wave-shape1,
+        .wave-shape2 {
+            position: absolute;
+            bottom: 200px;
+        }
+
+        .wave-shape2 {
+            left: 100px;
+        }
+
+        .user {
+            z-index: 2;
+        }
+
+        .phone {
+            width: 100%;
+        }
+
+        .boya {
+            margin: 0 -10px;
+            z-index: 1;
+        }
+    }
+
+    .d-flex.gap-4{
+        @include xxsm-screen{
+            flex-wrap: wrap;
+        }
+    } 
+    .banner-shape {
+        position: absolute;
+        top: 30%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: -1;
+        opacity: .4;
+        animation: jump 10s linear infinite;
+    }
+
+    &__text {
+        span {
+            color: hsl(var(--white));
+            @include fs-20;
+            font-weight: 500;
+        }
+        h1{
+            line-height: 1.2;
+            margin-top: 15px;
+        }
+
+        p {
+            padding: 20px 0 40px;
+        }
+
+        .voices-telk {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            @include fs-18;
+            margin-top: 50px;
+            flex-wrap: wrap;
+
+            .telk-img {
+                margin-left: 30px;
+                display: flex;
+
+                .fadeIn_50 {
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+
+                    &:nth-child(2) {
+                        position: relative;
+                        z-index: 1;
+                    }
+                }
+
+                img {
+                    margin: 0 -10px;
+                    border-radius: 100px;
+                    border: 2px solid hsl(var(--white));
+                    max-width: 45px;
+                    height: 45px;
+
+                }
+            }
+        }
+    }
+
+    .bg-shape {
+        img {
+            position: absolute;
+            z-index: -1;
+            width: 650px;
+            height: 678px;
+            left: 50%;
+            @include md-screen{
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width: 100%;
+            }
+        }
+    }
+
+    .btn-base-border {
+        &:hover {
+            &::after {
+                background: var(--base-gradient2);
+            }
+        }
+
+        &::after {
+            background: #1d1545;
+        }
+    }
+
+    .banner_wave {
+        position: absolute;
+        width: 60px;
+        height: 137px;
+        bottom: 30%;
+        left: 16%;
+
+        path {
+            animation: bounce 1.2s infinite ease-in-out;
+            &:nth-child(even){
+                animation: bounce 1.8s infinite ease-in-out;
+            }
+        }
+
+    }
+
+    .banner_wave2 {
+        position: absolute;
+        width: 60px;
+        height: 137px;
+        bottom: 40%;
+        left: 48%;
+
+        path {
+            animation: bounce 1.4s infinite ease-in-out;
+            &:nth-child(even){
+                animation: bounce 2s infinite ease-in-out;
+            }
+        } 
+    }
+
+    .banner_wave3 {
+        position: absolute;
+        width: 107px;
+        height: 143px;
+        left: 48%;
+        top: 10%;
+
+        path {
+            animation: bounce 1.6s infinite ease-in-out;
+            &:nth-child(even){
+                animation: bounce 2.2s infinite ease-in-out;
+            }
+        }
+
+    }
+
+    @keyframes bounce {
+
+        0%,
+        100% {
+            transform: scaleY(1);
+        }
+
+        50% {
+            transform: scaleY(1.2);
+        }
+    }
+}
+
+.banner-shapes{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    z-index: -1;
+    @include md-screen{
+        top: 72%;
+    }
+    img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0 auto;
+        opacity: .3; 
+        transition: all .3s;
+        &:nth-child(1){
+            animation: rotateYLoop 5s linear infinite;
+        }
+        &:nth-child(2){
+            animation: rotateYLoop 10s linear infinite;
+        }
+        &:nth-child(3){
+            animation: rotateYLoop 3s linear infinite;
+        }
+    }
+}
+
+@keyframes rotateYLoop {
+    0% {
+        transform: translate(-50%, -50%) rotateX(0deg) translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotateX(180deg) translate3d(0, 50%, 0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotateX(360deg) translate3d(0, 0, 0);
+    }
+}

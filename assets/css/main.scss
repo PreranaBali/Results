@@ -1,0 +1,56 @@
+/* ============================================================
+    [Master Stylesheet]
+
+    Theme Name:     AudiQ 
+    Theme URL:      https://photoclerks.com/template/audiq/
+    Description:    AudiQ - Voice AI Solutions html template
+    Author:         PhotoClerks           
+    Version:        1.0.0
+
+============================================================== */
+/*
+========================================
+*********** TABLE OF CONTENTS **********
+ 
+    01. Css Variables
+    02. Font Size css
+    03. Common Typography Css 
+    04. reset css 
+    05. Button CSS
+    06. margin Css
+    07. padding Css
+    08. Border Color Css
+    09. Banner css
+    10. Promo CSS 
+    11. Every-need CSS 
+    12. Find scale CSS 
+    13. Content creation CSS 
+    14. Use-cases CSS 
+    15. Customer CSS
+    16. Not-human CSS 
+    17. Pricing CSS 
+    18. Faq CSS 
+    19. Testimonial CSS
+    20. CallToAction CSS
+    21. Team CSS 
+    22. Blog CSS
+    23. Contact CSS
+    24. Cursor-effect CSS 
+    25. Preloader Css 
+    26. Scroll back to top Css
+    27. navbar css
+    28. footer css
+    29. breadcrumb css 
+ 
+========================================*/
+
+// abstract
+@import 'abstracts/index';
+// Base
+@import 'base/index';
+// Component
+@import 'components/index';
+// Module
+@import 'layout/index';
+// All partials
+@import 'partials/index';

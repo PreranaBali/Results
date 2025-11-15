@@ -1,0 +1,910 @@
+//* ==== Media Breakpoint for Each Device ====== */
+// Mobile Landscape
+@mixin landscape {
+  @media all and (orientation: landscape) {
+    @content;
+  }
+}
+
+// Mobile Portrait
+@mixin portrait {
+  @media all and (orientation: portrait) {
+    @content;
+  }
+}
+
+// Extra Extra Small Screen
+@mixin xxsm-screen {
+  @media screen and (max-width: 374px) {
+    @content;
+  }
+}
+
+// Xtra Small
+@mixin xsm-screen {
+  @media screen and (max-width: 424px) {
+    @content;
+  }
+}
+
+// Medium Small Screen (max-width: 575)
+@mixin msm-screen {
+  @media screen and (max-width: 575px) {
+    @content;
+  }
+}
+
+// Small Screen (max-width: 767)
+@mixin sm-screen {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+// Large Screen (max-width: 991)
+@mixin md-screen {
+  @media screen and (max-width: 991px) {
+    @content;
+  }
+}
+
+// Xtra Large Screen (max-width: 1199)
+@mixin lg-screen {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }
+}
+
+// Xtra Large Screen i (max-width: 1399)
+@mixin xl-screen {
+  @media screen and (max-width: 1399px) {
+    @content;
+  }
+}
+
+// Xtra Large Screen ii (max-width: 1499)
+@mixin xxl-screen {
+  @media screen and (max-width: 1499px) {
+    @content;
+  }
+}
+
+// Xtra Large Screen iii (max-width: 1599)
+@mixin xxxl-screen {
+  @media screen and (max-width: 1599px) {
+    @content;
+  }
+}
+
+// image mixin
+@mixin img-content {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// item hover effect
+@mixin item-hover {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all cubic-bezier(.645, .045, .355, 1) 0.6s;
+
+
+  &:hover,
+  &:focus {
+    color: hsl(var(--white));
+
+    span {
+      width: 225%;
+      height: 225%;
+    }
+  }
+
+  span {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: hsl(var(--base));
+    transition: width 0.6s ease-in-out, height 0.6s ease-in-out;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border-radius: 50px
+  }
+}
+
+// image effect
+@mixin image-effect {
+  position: relative;
+
+  img {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    transition: all 0.9s ease-in-out;
+
+    &:nth-child(2) {
+      transition: all 0.9s ease-in-out;
+    }
+
+    &:first-child {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      transform: translatex(50%) scalex(2);
+      opacity: 0;
+      filter: blur(10px);
+
+      img {
+        transform: scale(1);
+        transition: all 0.9s ease-in-out;
+      }
+    }
+  }
+}
+
+@mixin image-effect-hover {
+  img {
+    &:first-child {
+      transform: translatex(0) scalex(1);
+      opacity: 1;
+      filter: blur(0);
+    }
+
+    &:nth-child(2) {
+      transform: translatex(-50%) scalex(2);
+      opacity: 0;
+      filter: blur(10px);
+    }
+  }
+}
+
+
+// Define individual mixins for font sizes from fs-10 to fs-60
+@mixin fs-10 {
+  font-size: rem(10px);
+}
+
+@mixin fs-11 {
+  font-size: rem(11px);
+}
+
+@mixin fs-12 {
+  font-size: rem(12px);
+}
+
+@mixin fs-13 {
+  font-size: rem(13px);
+}
+
+@mixin fs-14 {
+  font-size: rem(14px);
+
+  @include lg-screen {
+    font-size: rem(13px);
+  } 
+}
+
+@mixin fs-15 {
+  font-size: rem(15px);
+
+  @include lg-screen {
+    font-size: rem(14px);
+  } 
+}
+
+@mixin fs-16 {
+  font-size: rem(16px);
+
+  @include lg-screen {
+    font-size: rem(15px);
+  }
+
+  @include md-screen {
+    font-size: rem(14px);
+  }
+ 
+}
+
+// Continue incrementally for fs-17 to fs-60
+@mixin fs-17 {
+  font-size: rem(17px);
+
+  @include lg-screen {
+    font-size: rem(16px);
+  }
+
+  @include md-screen {
+    font-size: rem(15px);
+  }
+
+  @include msm-screen {
+    font-size: rem(14px);
+  }
+}
+
+@mixin fs-18 {
+  font-size: rem(18px);
+
+  @include lg-screen {
+    font-size: rem(17px);
+  }
+
+  @include md-screen {
+    font-size: rem(16px);
+  }
+
+  @include msm-screen {
+    font-size: rem(15px);
+  }
+}
+
+@mixin fs-19 {
+  font-size: rem(19px);
+
+  @include lg-screen {
+    font-size: rem(18px);
+  }
+
+  @include md-screen {
+    font-size: rem(16px);
+  } 
+}
+
+@mixin fs-20 {
+  font-size: rem(20px);
+
+  @include lg-screen {
+    font-size: rem(18px);
+  }
+
+  @include md-screen {
+    font-size: rem(16px);
+  }
+ 
+}
+
+
+@mixin fs-21 {
+  font-size: rem(21px);
+
+  @include lg-screen {
+    font-size: rem(20px);
+  }
+
+  @include md-screen {
+    font-size: rem(18px);
+  }
+
+  @include msm-screen {
+    font-size: rem(18px);
+  }
+}
+
+@mixin fs-22 {
+  font-size: rem(22px);
+
+  @include lg-screen {
+    font-size: rem(20px);
+  }
+
+  @include md-screen {
+    font-size: rem(19px);
+  }
+
+  @include msm-screen {
+    font-size: rem(18px);
+  }
+}
+
+@mixin fs-23 {
+  font-size: rem(23px);
+
+  @include lg-screen {
+    font-size: rem(21px);
+  }
+
+  @include md-screen {
+    font-size: rem(20px);
+  }
+
+  @include msm-screen {
+    font-size: rem(19px);
+  }
+}
+
+@mixin fs-24 {
+  font-size: rem(24px);
+
+  @include lg-screen {
+    font-size: rem(22px);
+  }
+
+  @include md-screen {
+    font-size: rem(21px);
+  }
+
+  @include msm-screen {
+    font-size: rem(20px);
+  }
+}
+
+@mixin fs-25 {
+  font-size: rem(25px);
+
+  @include lg-screen {
+    font-size: rem(23px);
+  }
+
+  @include md-screen {
+    font-size: rem(21px);
+  }
+
+  @include msm-screen {
+    font-size: rem(20px);
+  }
+}
+
+@mixin fs-26 {
+  font-size: 1.5rem;
+
+  @include lg-screen {
+    font-size: 1.563rem;
+  }
+
+  @include md-screen {
+    font-size: 1.5rem;
+  }
+
+  @include msm-screen {
+    font-size: 1.438rem;
+  }
+}
+
+@mixin fs-27 {
+  font-size: 1.563rem;
+
+  @include lg-screen {
+    font-size: 1.625rem;
+  }
+
+  @include md-screen {
+    font-size: 1.563rem;
+  }
+
+  @include msm-screen {
+    font-size: 1.5rem;
+  }
+}
+
+@mixin fs-28 {
+  font-size: 1.625rem;
+
+  @include lg-screen {
+    font-size: 1.688rem;
+  }
+
+  @include md-screen {
+    font-size: 1.625rem;
+  }
+
+  @include msm-screen {
+    font-size: 1.563rem;
+  }
+}
+
+@mixin fs-29 {
+  font-size: 1.688rem;
+
+  @include lg-screen {
+    font-size: 1.75rem;
+  }
+
+  @include md-screen {
+    font-size: 1.688rem;
+  }
+
+  @include msm-screen {
+    font-size: 1.625rem;
+  }
+}
+
+@mixin fs-30 {
+  font-size: 1.75rem;
+
+  @include lg-screen {
+    font-size: 1.813rem;
+  }
+
+  @include md-screen {
+    font-size: 1.75rem;
+  }
+
+  @include msm-screen {
+    font-size: 1.688rem;
+  }
+}
+ 
+@mixin fs-31 {
+  font-size: 1.813rem;
+
+  @include lg-screen {
+    font-size: 1.875rem;
+  }
+
+  @include md-screen {
+    font-size: 1.813rem;
+  }
+
+  @include msm-screen {
+    font-size: 1.75rem;
+  }
+}
+
+@mixin fs-32 {
+  font-size: 1.875rem;
+
+  @include lg-screen {
+    font-size: 1.938rem;
+  }
+
+  @include md-screen {
+    font-size: 1.875rem;
+  }
+
+  @include msm-screen {
+    font-size: 1.813rem;
+  }
+}
+
+@mixin fs-33 {
+  font-size: 1.938rem;
+
+  @include lg-screen {
+    font-size: 2rem;
+  }
+
+  @include md-screen {
+    font-size: 1.938rem;
+  }
+
+  @include msm-screen {
+    font-size: 1.875rem;
+  }
+}
+
+@mixin fs-34 {
+  font-size: 2rem;
+
+  @include lg-screen {
+    font-size: 2.063rem;
+  }
+
+  @include md-screen {
+    font-size: 2rem;
+  }
+
+  @include msm-screen {
+    font-size: 1.938rem;
+  }
+}
+
+@mixin fs-35 {
+  font-size: 2.063rem;
+
+  @include lg-screen {
+    font-size: 2.125rem;
+  }
+
+  @include md-screen {
+    font-size: 2.063rem;
+  }
+
+  @include msm-screen {
+    font-size: 2rem;
+  }
+}
+
+@mixin fs-36 {
+  font-size: 2.125rem;
+
+  @include lg-screen {
+    font-size: 2.188rem;
+  }
+
+  @include md-screen {
+    font-size: 2.125rem;
+  }
+
+  @include msm-screen {
+    font-size: 2.063rem;
+  }
+}
+
+@mixin fs-37 {
+  font-size: 2.188rem;
+
+  @include lg-screen {
+    font-size: 2.25rem;
+  }
+
+  @include md-screen {
+    font-size: 2.188rem;
+  }
+
+  @include msm-screen {
+    font-size: 2.125rem;
+  }
+}
+
+@mixin fs-38 {
+  font-size: 2.25rem;
+
+  @include lg-screen {
+    font-size: 2.313rem;
+  }
+
+  @include md-screen {
+    font-size: 2.25rem;
+  }
+
+  @include msm-screen {
+    font-size: 2.188rem;
+  }
+}
+
+@mixin fs-39 {
+  font-size: 2.313rem;
+
+  @include lg-screen {
+    font-size: 2.375rem;
+  }
+
+  @include md-screen {
+    font-size: 2.313rem;
+  }
+
+  @include msm-screen {
+    font-size: 2.25rem;
+  }
+}
+
+@mixin fs-40 {
+  font-size: 2.375rem;
+
+  @include lg-screen {
+    font-size: 2.438rem;
+  }
+
+  @include md-screen {
+    font-size: 2.375rem;
+  }
+
+  @include msm-screen {
+    font-size: 2.313rem;
+  }
+}
+
+@mixin fs-41 {
+  font-size: 2.438rem;
+
+  @include lg-screen {
+    font-size: 2.5rem;
+  }
+
+  @include md-screen {
+    font-size: 2.438rem;
+  }
+
+  @include msm-screen {
+    font-size: 2.375rem;
+  }
+}
+
+@mixin fs-42 {
+  font-size: 2.5rem;
+
+  @include lg-screen {
+    font-size: 2.563rem;
+  }
+
+  @include md-screen {
+    font-size: 2.5rem;
+  }
+
+  @include msm-screen {
+    font-size: 2.438rem;
+  }
+}
+
+@mixin fs-43 {
+  font-size: 2.563rem;
+
+  @include lg-screen {
+    font-size: 2.625rem;
+  }
+
+  @include md-screen {
+    font-size: 2.563rem;
+  }
+
+  @include msm-screen {
+    font-size: 2.5rem;
+  }
+}
+
+@mixin fs-44 {
+  font-size: 2.625rem;
+
+  @include lg-screen {
+    font-size: 2.688rem;
+  }
+
+  @include md-screen {
+    font-size: 2.625rem;
+  }
+
+  @include msm-screen {
+    font-size: 2.563rem;
+  }
+}
+
+@mixin fs-45 {
+  font-size: 2.688rem;
+
+  @include lg-screen {
+    font-size: 2.75rem;
+  }
+
+  @include md-screen {
+    font-size: 2.688rem;
+  }
+
+  @include msm-screen {
+    font-size: 2.625rem;
+  }
+}
+
+@mixin fs-46 {
+  font-size: 2.75rem;
+
+  @include lg-screen {
+    font-size: 2.813rem;
+  }
+
+  @include md-screen {
+    font-size: 2.75rem;
+  }
+
+  @include msm-screen {
+    font-size: 2.688rem;
+  }
+}
+
+@mixin fs-47 {
+  font-size: 2.813rem;
+
+  @include lg-screen {
+    font-size: 2.875rem;
+  }
+
+  @include md-screen {
+    font-size: 2.813rem;
+  }
+
+  @include msm-screen {
+    font-size: 2.75rem;
+  }
+}
+
+@mixin fs-48 {
+  font-size: 2.875rem;
+
+  @include lg-screen {
+    font-size: 2.938rem;
+  }
+
+  @include md-screen {
+    font-size: 2.875rem;
+  }
+
+  @include msm-screen {
+    font-size: 2.813rem;
+  }
+}
+
+@mixin fs-49 {
+  font-size: 2.938rem;
+
+  @include lg-screen {
+    font-size: 3rem;
+  }
+
+  @include md-screen {
+    font-size: 2.938rem;
+  }
+
+  @include msm-screen {
+    font-size: 2.875rem;
+  }
+}
+
+@mixin fs-50 {
+  font-size: 3rem;
+
+  @include lg-screen {
+    font-size: 3.063rem;
+  }
+
+  @include md-screen {
+    font-size: 3rem;
+  }
+
+  @include msm-screen {
+    font-size: 2.938rem;
+  }
+}
+
+@mixin fs-51 {
+  font-size: 3.063rem;
+
+  @include lg-screen {
+    font-size: 3.125rem;
+  }
+
+  @include md-screen {
+    font-size: 3.063rem;
+  }
+
+  @include msm-screen {
+    font-size: 3rem;
+  }
+}
+
+@mixin fs-52 {
+  font-size: 3.125rem;
+
+  @include lg-screen {
+    font-size: 3.188rem;
+  }
+
+  @include md-screen {
+    font-size: 3.125rem;
+  }
+
+  @include msm-screen {
+    font-size: 3.063rem;
+  }
+}
+
+@mixin fs-53 {
+  font-size: 3.188rem;
+
+  @include lg-screen {
+    font-size: 3.25rem;
+  }
+
+  @include md-screen {
+    font-size: 3.188rem;
+  }
+
+  @include msm-screen {
+    font-size: 3.125rem;
+  }
+}
+
+@mixin fs-54 {
+  font-size: 3.25rem;
+
+  @include lg-screen {
+    font-size: 3.313rem;
+  }
+
+  @include md-screen {
+    font-size: 3.25rem;
+  }
+
+  @include msm-screen {
+    font-size: 3.188rem;
+  }
+}
+
+@mixin fs-55 {
+  font-size: 3.313rem;
+
+  @include lg-screen {
+    font-size: 3.375rem;
+  }
+
+  @include md-screen {
+    font-size: 3.313rem;
+  }
+
+  @include msm-screen {
+    font-size: 3.25rem;
+  }
+}
+
+@mixin fs-56 {
+  font-size: 3.375rem;
+
+  @include lg-screen {
+    font-size: 3.438rem;
+  }
+
+  @include md-screen {
+    font-size: 3.375rem;
+  }
+
+  @include msm-screen {
+    font-size: 3.313rem;
+  }
+}
+
+@mixin fs-57 {
+  font-size: 3.438rem;
+
+  @include lg-screen {
+    font-size: 3.5rem;
+  }
+
+  @include md-screen {
+    font-size: 3.438rem;
+  }
+
+  @include msm-screen {
+    font-size: 3.375rem;
+  }
+}
+
+@mixin fs-58 {
+  font-size: 3.5rem;
+
+  @include lg-screen {
+    font-size: 3.563rem;
+  }
+
+  @include md-screen {
+    font-size: 3.5rem;
+  }
+
+  @include msm-screen {
+    font-size: 3.438rem;
+  }
+}
+
+@mixin fs-59 {
+  font-size: 3.563rem;
+
+  @include lg-screen {
+    font-size: 3.625rem;
+  }
+
+  @include md-screen {
+    font-size: 3.563rem;
+  }
+
+  @include msm-screen {
+    font-size: 3.5rem;
+  }
+}
+
+@mixin fs-60 {
+  font-size: 3.625rem;
+
+  @include lg-screen {
+    font-size: 3.75rem;
+  }
+
+  @include md-screen {
+    font-size: 3.625rem;
+  }
+
+  @include msm-screen {
+    font-size: 3.563rem;
+  }
+}

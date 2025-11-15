@@ -1,0 +1,47 @@
+/* ============================
+    breadcrumb css
+=============================== */
+.breadcrumb{
+    padding: 215px 0 130px;
+    background: hsl(var(--white)/.02);
+    backdrop-filter: blur(3px);
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+    @include md-screen{
+        padding: 100px 0 60px;
+    }
+    .banner-shape{
+        position: absolute;
+        top: 58%;
+        transform: translateY(-50%);
+        z-index: -1;
+        opacity: .3 ;
+    }
+    &__title{
+       @include md-screen{
+        font-size: 40px;
+       }
+    }
+    &__wrapper{
+        text-align: center;
+    }
+    &__list{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    &__item{
+        @include fs-20;
+        text-transform: capitalize;
+        color: hsl(var(--white));
+        a{
+            color: hsl(var(--white));
+            &:hover{
+                color: hsl(var(--base));
+            }
+        }
+    }
+}

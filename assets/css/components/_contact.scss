@@ -1,0 +1,561 @@
+/* ===========================
+   Contact CSS 
+============================= */
+.contact-section {
+    .login-content {
+        border: 2px solid hsl(var(--white)/.05);
+        background: hsl(var(--white)/.03);
+        backdrop-filter: blur(10px);
+        padding: 50px 40px;
+        border-radius: 10px;
+
+        p {
+            color: hsl(var(--white)/.5);
+            padding: 25px 0 20px;
+        }
+    }
+
+
+    form {
+        display: grid;
+        gap: 15px;
+
+        .contact-input {
+            position: relative;
+
+            input {
+                width: 100%;
+                height: 55px;
+                background: none;
+                border-bottom: 1px solid hsl(var(--white));
+                box-shadow: none;
+                outline: none;
+                padding: 0;
+                border-radius: 0;
+                border: 0;
+                border-bottom: 1px solid hsl(var(--white)/.08);
+                color: hsl(var(--white)) !important;
+                @include fs-16;
+                font-weight: 500;
+
+                &::placeholder {
+                    color: hsl(var(--white)/.5);
+                }
+                &:focus{
+                    background-color: unset;
+                    color: hsl(var(--white));
+                }
+            }
+
+            input:-webkit-autofill {
+                -webkit-text-fill-color: hsl(var(--white)) !important;
+                transition: background-color 5000s ease-in-out 0s;
+                background-color: transparent !important;
+                box-shadow: none;
+            }
+
+            .password-show-toggle {
+                position: absolute;
+                right: 4px;
+                top: 51%;
+                transform: translateY(-50%);
+                cursor: pointer;
+                height: 20px;
+
+                i {
+                    color: hsl(var(--white)/.5);
+                }
+
+                .open-eye-icon {
+                    display: none;
+                    color: hsl(var(--white));
+                }
+
+            }
+
+        }
+
+        .btn-border {
+            justify-content: center;
+        }
+
+        .check-pas {
+            margin: 10px 0;
+            @include md-screen{
+                gap: 10px
+            }
+
+            label {
+                @include fs-15;
+            }
+
+            a {
+                color: hsl(var(--white));
+                @include fs-15;
+                text-transform: capitalize;
+                font-weight: 600;
+
+                &:hover {
+                    color: hsl(var(--base));
+                }
+
+            }
+        }
+
+        .btn-theme-gradient {
+            justify-content: center;
+
+        }
+
+        .or {
+            text-align: center;
+            position: relative;
+            text-transform: uppercase;
+            @include fs-18;
+            font-weight: 700;
+            margin: 10px 0;
+
+            &::after,
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 13px;
+                width: 45%;
+                height: 1px;
+                background-color: hsl(var(--white)/.1);
+            }
+
+            &::after {
+                left: auto;
+                right: 0;
+            }
+        }
+
+        .wight-sing {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+
+            a {
+                text-align: center;
+                @include fs-16;
+                font-weight: 600;
+                color: hsl(var(--white));
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                justify-content: center;
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            .google {
+                background: #dd4b39;
+            }
+
+            .facebook {
+                background: #3b5998;
+            }
+        }
+
+        .login-footer {
+            text-align: center;
+            @include fs-18;
+            padding-top: 20px;
+
+            a {
+                font-weight: 700;
+                color: hsl(var(--white));
+
+                &:hover {
+                    color: hsl(var(--base));
+                }
+            }
+        }
+
+    }
+}
+
+.contacts-form {
+    form {
+        display: grid;
+        gap: 24px;
+    }
+
+    .input-box {
+        --box--border__top-left: url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='1' y='1' width='18' height='18' rx='4' ry='4' stroke='%23000' stroke-width='1.5' /></svg>");
+        --box--border__top: url("data:image/svg+xml,<svg preserveAspectRatio='none' width='100' height='10' viewBox='0 0 100 10' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='-1' y1='1' x2='101' y2='1' stroke='%23000' stroke-width='1.5'/></svg>");
+        --box--border__top-right: url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='-9' y='1' width='18' height='18' rx='4' ry='4' stroke='black' stroke-width='1.5' /></svg>");
+        --box--border__left: url("data:image/svg+xml,<svg preserveAspectRatio='none' width='10' height='100' viewBox='0 0 10 100' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='1' y1='-1' x2='1' y2='101' stroke='%23000' stroke-width='1.5'/></svg>");
+        --box--border__right: url("data:image/svg+xml,<svg preserveAspectRatio='none' width='10' height='100' viewBox='0 0 10 100' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='9' y1='-1' x2='9' y2='101' stroke='%23000' stroke-width='1.5'/></svg>");
+        --box--border__bottom-left: url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='1' y='-9' width='18' height='18' rx='4' ry='4' stroke='%23000' stroke-width='1.5' /></svg>");
+        --box--border__bottom: url("data:image/svg+xml,<svg preserveAspectRatio='none' width='100' height='10' viewBox='0 0 100 10' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='-1' y1='9' x2='101' y2='9' stroke='%23000' stroke-width='1.5'/></svg>");
+        --box--border__bottom-right: url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='-9' y='-9' width='18' height='18' rx='4' ry='4' stroke='black' stroke-width='1.5' /></svg>");
+        position: relative;
+        background: hsl(var(--white)/.02);
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: hsl(var(--white)/.1);
+            z-index: -1;
+            animation: gradient 15s ease infinite;
+            mask:
+                var(--box--border__top-left) 0 0 / .625rem .625rem,
+                var(--box--border__top) .625rem 0 / calc(100% - 1.25rem) .625rem,
+                var(--box--border__top-right) 100% 0 / .625rem .625rem,
+                var(--box--border__left) 0 .625rem / .625rem calc(100% - 1.25rem),
+                var(--box--border__right) 100% .625rem / .625rem calc(100% - 1.25rem),
+                var(--box--border__bottom-left) 0 100% / .625rem .625rem,
+                var(--box--border__bottom) .625rem 100% / calc(100% - 1.25rem) .625rem,
+                var(--box--border__bottom-right) 100% 100% / .625rem .625rem;
+            mask-repeat: no-repeat;
+        }
+    }
+
+    textarea,
+    input {
+        background: none;
+        outline: none;
+        border: 0;
+        box-shadow: none;
+        color: hsl(var(--white));
+        width: 100%;
+        padding: 17px 20px;
+        @include fs-16;
+        &:focus{
+            background-color: unset;
+            color: hsl(var(--white));
+        }
+    }
+
+    textarea {
+        height: 140px;
+    }
+
+    input:-webkit-autofill {
+        -webkit-text-fill-color: hsl(var(--white)) !important;
+        transition: background-color 5000s ease-in-out 0s;
+        background-color: transparent !important;
+        box-shadow: none;
+    }
+
+    button {
+        justify-content: center;
+    }
+}
+
+.contacts-images {
+    --box--border__top-left: url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='1' y='1' width='18' height='18' rx='4' ry='4' stroke='%23000' stroke-width='1.5' /></svg>");
+    --box--border__top: url("data:image/svg+xml,<svg preserveAspectRatio='none' width='100' height='10' viewBox='0 0 100 10' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='-1' y1='1' x2='101' y2='1' stroke='%23000' stroke-width='1.5'/></svg>");
+    --box--border__top-right: url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='-9' y='1' width='18' height='18' rx='4' ry='4' stroke='black' stroke-width='1.5' /></svg>");
+    --box--border__left: url("data:image/svg+xml,<svg preserveAspectRatio='none' width='10' height='100' viewBox='0 0 10 100' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='1' y1='-1' x2='1' y2='101' stroke='%23000' stroke-width='1.5'/></svg>");
+    --box--border__right: url("data:image/svg+xml,<svg preserveAspectRatio='none' width='10' height='100' viewBox='0 0 10 100' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='9' y1='-1' x2='9' y2='101' stroke='%23000' stroke-width='1.5'/></svg>");
+    --box--border__bottom-left: url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='1' y='-9' width='18' height='18' rx='4' ry='4' stroke='%23000' stroke-width='1.5' /></svg>");
+    --box--border__bottom: url("data:image/svg+xml,<svg preserveAspectRatio='none' width='100' height='10' viewBox='0 0 100 10' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='-1' y1='9' x2='101' y2='9' stroke='%23000' stroke-width='1.5'/></svg>");
+    --box--border__bottom-right: url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='-9' y='-9' width='18' height='18' rx='4' ry='4' stroke='black' stroke-width='1.5' /></svg>");
+    position: relative;
+    text-align: center;
+    max-width: 550px;
+    margin-left: auto;
+    padding: 0 30px;
+
+    img {
+        margin: 0 auto;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 82%;
+        background: hsl(var(--white)/.02);
+
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 82%;
+        background: hsl(var(--white)/.1);
+        z-index: -1;
+        animation: gradient 15s ease infinite;
+        mask:
+            var(--box--border__top-left) 0 0 / .625rem .625rem,
+            var(--box--border__top) .625rem 0 / calc(100% - 1.25rem) .625rem,
+            var(--box--border__top-right) 100% 0 / .625rem .625rem,
+            var(--box--border__left) 0 .625rem / .625rem calc(100% - 1.25rem),
+            var(--box--border__right) 100% .625rem / .625rem calc(100% - 1.25rem),
+            var(--box--border__bottom-left) 0 100% / .625rem .625rem,
+            var(--box--border__bottom) .625rem 100% / calc(100% - 1.25rem) .625rem,
+            var(--box--border__bottom-right) 100% 100% / .625rem .625rem;
+        mask-repeat: no-repeat;
+    }
+}
+
+.contacts-adders-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    &:hover{
+        i{
+            &::after{
+                transform: translateX(0);
+            }
+        }
+    }
+    i {
+        --box--border__top-left: url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='1' y='1' width='18' height='18' rx='4' ry='4' stroke='%23000' stroke-width='1' /></svg>");
+        --box--border__top: url("data:image/svg+xml,<svg preserveAspectRatio='none' width='100' height='10' viewBox='0 0 100 10' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='-1' y1='1' x2='101' y2='1' stroke='%23000' stroke-width='1'/></svg>");
+        --box--border__top-right: url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='-9' y='1' width='18' height='18' rx='4' ry='4' stroke='black' stroke-width='1' /></svg>");
+        --box--border__left: url("data:image/svg+xml,<svg preserveAspectRatio='none' width='10' height='100' viewBox='0 0 10 100' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='1' y1='-1' x2='1' y2='101' stroke='%23000' stroke-width='1'/></svg>");
+        --box--border__right: url("data:image/svg+xml,<svg preserveAspectRatio='none' width='10' height='100' viewBox='0 0 10 100' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='9' y1='-1' x2='9' y2='101' stroke='%23000' stroke-width='1'/></svg>");
+        --box--border__bottom-left: url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='1' y='-9' width='18' height='18' rx='4' ry='4' stroke='%23000' stroke-width='1' /></svg>");
+        --box--border__bottom: url("data:image/svg+xml,<svg preserveAspectRatio='none' width='100' height='10' viewBox='0 0 100 10' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='-1' y1='9' x2='101' y2='9' stroke='%23000' stroke-width='1'/></svg>");
+        --box--border__bottom-right: url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='-9' y='-9' width='18' height='18' rx='4' ry='4' stroke='black' stroke-width='1' /></svg>");
+
+        width: 60px;
+        height: 60px;
+        border-radius: 5px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .3s;
+        @include fs-35;
+        overflow: hidden;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--base-gradient);
+            transform: translateX(-100%);
+            transition: all .5s;
+            z-index: -1;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--base-gradient);
+            z-index: -1;
+            animation: gradient 15s ease infinite;
+            mask:
+                var(--box--border__top-left) 0 0 / .625rem .625rem,
+                var(--box--border__top) .625rem 0 / calc(100% - 1.25rem) .625rem,
+                var(--box--border__top-right) 100% 0 / .625rem .625rem,
+                var(--box--border__left) 0 .625rem / .625rem calc(100% - 1.25rem),
+                var(--box--border__right) 100% .625rem / .625rem calc(100% - 1.25rem),
+                var(--box--border__bottom-left) 0 100% / .625rem .625rem,
+                var(--box--border__bottom) .625rem 100% / calc(100% - 1.25rem) .625rem,
+                var(--box--border__bottom-right) 100% 100% / .625rem .625rem;
+            mask-repeat: no-repeat;
+        }
+    }
+    .text{
+        p{
+            padding-bottom: 5px;
+        }
+    }
+}
+
+.contact-box {
+    display: grid;
+    grid-template-columns: 600px 1fr;
+    align-items: center;
+    justify-content: center; 
+    
+    @include md-screen{
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    form {
+        background: hsl(var(--white)/.03);
+        border: 2px solid hsl(var(--white)/.05);
+        border-radius: 5px;
+        backdrop-filter: blur(5px);
+        padding: 50px 120px 50px 60px;
+        display: grid;
+        gap: 24px;
+        @include md-screen{
+            padding: 40px;
+        }
+        @include sm-screen{
+            padding: 30px 20px;
+        }
+ 
+        textarea,
+        input {
+            background: none;
+            outline: none;
+            border: 0;
+            box-shadow: none;
+            color: hsl(var(--white));
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 5px;
+            @include fs-16;
+            border: 2px solid hsl(var(--white)/.05);
+            &::placeholder{
+                color: hsl(var(--white)/.7);
+            }
+            &:focus{
+                background-color: unset;
+                color: hsl(var(--white));
+            }
+        }
+
+        select{
+            width: 100%;
+            padding: 17px 20px;
+            border-radius: 5px;
+            @include fs-16;
+            background-color: unset;
+            color: hsl(var(--white));
+            border: 2px solid hsl(var(--white)/.05);
+            option{
+                color: hsl(var(--black));  
+                line-height: 1.6;
+            }
+        }
+
+        textarea {
+            height: 140px;
+        }
+
+        input:-webkit-autofill {
+            -webkit-text-fill-color: hsl(var(--white)) !important;
+            transition: background-color 5000s ease-in-out 0s;
+            background-color: transparent !important;
+            box-shadow: none;
+        }
+
+        button {
+            justify-content: center;
+        }
+    }
+
+    .contact-info {
+        display: grid;
+        gap: 24px;
+        margin-left: -60px;
+        @include md-screen{
+            margin-left: 0;
+        }
+
+        &__item {
+            background: hsl(var(--white)/.03);
+            border: 2px solid hsl(var(--white)/.05);
+            border-radius: 5px;
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 30px;
+            @include sm-screen{
+                padding: 20px;
+                gap: 20px;
+            }
+
+            &:hover {
+                i {
+                    &::after {
+                        transform: translateX(0);
+                    }
+                }
+            }
+
+            i {
+                --box--border__top-left: url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='1' y='1' width='18' height='18' rx='4' ry='4' stroke='%23000' stroke-width='1' /></svg>");
+                --box--border__top: url("data:image/svg+xml,<svg preserveAspectRatio='none' width='100' height='10' viewBox='0 0 100 10' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='-1' y1='1' x2='101' y2='1' stroke='%23000' stroke-width='1'/></svg>");
+                --box--border__top-right: url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='-9' y='1' width='18' height='18' rx='4' ry='4' stroke='black' stroke-width='1' /></svg>");
+                --box--border__left: url("data:image/svg+xml,<svg preserveAspectRatio='none' width='10' height='100' viewBox='0 0 10 100' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='1' y1='-1' x2='1' y2='101' stroke='%23000' stroke-width='1'/></svg>");
+                --box--border__right: url("data:image/svg+xml,<svg preserveAspectRatio='none' width='10' height='100' viewBox='0 0 10 100' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='9' y1='-1' x2='9' y2='101' stroke='%23000' stroke-width='1'/></svg>");
+                --box--border__bottom-left: url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='1' y='-9' width='18' height='18' rx='4' ry='4' stroke='%23000' stroke-width='1' /></svg>");
+                --box--border__bottom: url("data:image/svg+xml,<svg preserveAspectRatio='none' width='100' height='10' viewBox='0 0 100 10' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='-1' y1='9' x2='101' y2='9' stroke='%23000' stroke-width='1'/></svg>");
+                --box--border__bottom-right: url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='-9' y='-9' width='18' height='18' rx='4' ry='4' stroke='black' stroke-width='1' /></svg>");
+
+                width: 60px;
+                height: 60px;
+                border-radius: 5px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all .3s;
+                @include fs-35;
+                overflow: hidden;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: var(--base-gradient);
+                    transform: translateX(-100%);
+                    transition: all .5s;
+                    z-index: -1;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: var(--base-gradient);
+                    z-index: -1;
+                    animation: gradient 15s ease infinite;
+                    mask:
+                        var(--box--border__top-left) 0 0 / .625rem .625rem,
+                        var(--box--border__top) .625rem 0 / calc(100% - 1.25rem) .625rem,
+                        var(--box--border__top-right) 100% 0 / .625rem .625rem,
+                        var(--box--border__left) 0 .625rem / .625rem calc(100% - 1.25rem),
+                        var(--box--border__right) 100% .625rem / .625rem calc(100% - 1.25rem),
+                        var(--box--border__bottom-left) 0 100% / .625rem .625rem,
+                        var(--box--border__bottom) .625rem 100% / calc(100% - 1.25rem) .625rem,
+                        var(--box--border__bottom-right) 100% 100% / .625rem .625rem;
+                    mask-repeat: no-repeat;
+                }
+            }
+
+            .text {
+                p {
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }
+}
+
+.contacts-section{ 
+    iframe{
+        width: 100%;
+        height: 500px;  
+        margin-bottom: -6px;
+    }
+    #charCount{
+        @include fs-12;
+    }
+}

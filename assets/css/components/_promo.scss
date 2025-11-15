@@ -1,0 +1,155 @@
+/* ===========================
+   Promo CSS 
+============================= */
+.promo-section{
+    position: relative;
+    z-index: 1;
+    &__content{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        @include md-screen{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include xsm-screen{
+            grid-template-columns: 1fr;
+        }
+    }
+    &__item{ 
+        padding: 0 40px 20px;
+        border-bottom: 1px solid hsl(var(--base-two));
+        position: relative;
+        &:hover{
+            i{ 
+                animation: ekg 1s ease-in-out forwards;
+            }
+            svg,img{
+                animation: ekg 1s ease-in-out forwards;
+                path{
+                    fill: hsl(var(--white));
+                } 
+            }
+        }
+        @keyframes ekg {
+            0% {
+              opacity: .3;
+            }
+            25% {
+              opacity: 1;
+            }
+            50% {
+              stroke-dashoffset: 2000;
+            }
+            99% {
+              opacity: .2;
+              stroke-dashoffset: 3000;
+            }
+            100% {
+              stroke-dashoffset: 1000;
+            }
+        }
+        
+        
+        @keyframes icon_jump {
+            0% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+            40% {
+                -webkit-transform: translate3d(0, 50%, 0);
+                transform: translate3d(0, 50%, 0);
+            }
+            100% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        
+        @include xl-screen{
+            padding: 0 20px 20px;
+        }
+        @include md-screen{
+            padding: 10px 20px 20px;
+        }
+        @include xsm-screen{
+            text-align: center;
+            border-bottom: 1px solid hsl(var(--base-two)/.2);
+        }
+        
+        
+        &::after,
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: -4px;
+            width: 1px;
+            height: 24px;
+            background: hsl(var(--base-two));
+            transform: rotate(-20deg);
+            @include xsm-screen{
+                display: none;
+            }
+        }
+        &::before{ 
+            right: -4px; 
+            left: auto;
+            transform: rotate(-160deg);
+        }
+        i{
+            font-size: 50px;
+            color: hsl(var(--white));
+            @include md-screen{
+                font-size: 40px;
+            }
+        }
+        svg,img{
+            height: 60px;
+            transition: all .3s;
+            path{
+                transition: all .3s;
+            }
+        }
+        h4{
+            padding: 20px 0 10px;
+        }
+        p{
+            color: hsl(var(--white)/.9);
+        }
+        &:first-child{
+            padding-left: 0;
+            &::after{ 
+                display: none;
+            }
+        }
+        &:nth-child(2){
+            @include md-screen{
+                &::before{
+                    display: none;
+                }
+            }
+        }
+        &:nth-child(3){
+            @include md-screen{
+                &::after{
+                    display: none;
+                }
+            }
+        }
+        &:last-child{
+            padding-right: 0;
+            &::before{ 
+                display: none;
+            }
+        }
+    }
+
+    &.promo-tow{
+        background: hsl(var(--white)/.03);
+        backdrop-filter: blur(3px);
+        .promo-section__item{
+            margin-bottom: 0;
+            border-bottom: 0;
+        }
+    }
+}

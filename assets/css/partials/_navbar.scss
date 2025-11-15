@@ -1,0 +1,305 @@
+/* ============================
+    navbar css
+=============================== */
+.navbar-one {
+    width: 100%;
+    height: auto;
+    z-index: 111;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    background: hsl(var(--black)/.2);
+    backdrop-filter: blur(10px); 
+
+    &.sticky {
+        backdrop-filter: blur(50px);
+    }
+
+    .logo-img{
+        @include md-screen{
+            height: 40px;
+        }
+    }
+
+    .right-nav {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        order: 1;
+
+        @include lg-screen {
+            gap: 10px;
+        }
+
+        @include md-screen {
+            padding: 0 10px 15px;
+            gap: 20px;
+        }
+
+        .country__select {
+            .country__select_button {
+                color: hsl(var(--white));
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                img {
+                    margin-right: 4px;
+                }
+
+                @include fs-16;
+
+                &::after {
+                    content: "\f107";
+                    font-family: "Font Awesome 6 free";
+                    font-weight: 900;
+                }
+            }
+
+            .dropdown-menu {
+                min-width: 115px;
+                margin-top: 20px;
+                @include md-screen{
+                    left: 0;
+                }
+
+                li {
+                    padding: 10px 15px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-weight: 500;
+                    cursor: pointer;
+                    transition: all .3s;
+                    @include fs-16;
+
+                    &:hover {
+                        background: hsl(var(--base)/.06)
+                    }
+                }
+            }
+        }
+
+        .btn-base-border{
+            padding: 12px 30px;
+            &::before,&::after{
+                clip-path: polygon(10px 0, 93% 0, 100% 10px, 100% 81%, 92% 100%, 11px 100%, 0 80%, 0 10px);
+            }
+        }
+    }
+
+    .btn-border{
+        padding: 10px 20px;
+    }
+
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 2px;
+    padding-right: 0;
+    margin-right: -10px;
+
+    .animated-svg {
+        display: block;
+        width: 50px;
+        height: 40px;
+
+        .stroke {
+            color: hsl(var(--secondary));
+        }
+    }
+
+    .line {
+        stroke-dasharray: 18;
+        stroke-dashoffset: 18;
+        animation: draw 2s ease-in-out infinite;
+    }
+
+    .line-1 {
+        animation-delay: 0s;
+    }
+
+    .line-2 {
+        animation-delay: 0.3s;
+    }
+
+    .line-3 {
+        animation-delay: 0.6s;
+    }
+
+    @keyframes draw {
+        0% {
+            stroke-dashoffset: 18;
+        }
+
+        50% {
+            stroke-dashoffset: 0;
+        }
+
+        100% {
+            stroke-dashoffset: 18;
+        }
+    }
+}
+
+
+.navbar-nav {
+    gap: rem(24px);
+    position: relative;
+    @include lg-screen{
+        gap: rem(15px);
+    }
+    @include md-screen {
+        gap: rem(0px);
+    }
+
+    .nav-item {
+        .nav-link {
+            color: hsl(var(--white)/.85);
+            @include fs-16;
+            font-weight: 500;
+            padding: rem(25px) rem(5px);
+            text-transform: capitalize;
+            display: flex;
+            align-items: center;
+
+            @include lg-screen {
+                @include fs-15;
+                padding-left: rem(5px);
+                padding-right: rem(5px);
+            }
+
+            @include md-screen {
+                padding: rem(10px);
+                color: hsl(var(--white));
+                @include fs-15;
+            }
+ 
+
+            &.active,
+            &:hover {
+                color: hsl(var(--white));
+                font-weight: 700;
+
+                span {
+                    &::before {
+                        width: 100%;
+                        transition: all 0.5s ease-in-out;
+                    }
+                }
+            }
+
+        }
+
+        .dropdown-toggle::after {
+            content: "\f107";
+            font-weight: 900;
+            font-family: "Font Awesome 6 free";
+            border: 0;
+
+            @include md-screen {
+                margin-left: auto;
+            }
+        }
+
+        &.dropdown {
+            @media (max-width: 991.98px) {
+                .nav-link {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    &::after {
+                        content: "\f107";
+                        font-weight: 900;
+                        font-family: "Font Awesome 6 free";
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+
+        .dropdown-menu {
+            transition: 0.5s;
+            margin-top: 0;
+            padding: 15px 20px;
+            min-width: 200px;
+            border: 1px solid hsl(var(--border-color));
+
+
+            @media all and (min-width: 991.98px) {
+                display: block;
+                opacity: 0;
+                visibility: hidden;
+                &.fade-down {
+                    top: 80%;
+                    transform: rotateX(-75deg);
+                    transform-origin: 0% 0%;
+                }
+    
+                &.fade-up {
+                    top: 100%;
+                }
+            }
+
+           
+
+            a {
+                padding: 5px 0px;
+                background: none;
+                transition: 0.5s;
+                position: relative;
+                font-weight: 500;
+                font-size: 14px;
+                border: 0;
+                color: hsl(var(--gray3));
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    height: 2px;
+                    width: 0px;
+                    z-index: 99;
+                    background: hsl(var(--primary));
+                    opacity: 0;
+                    border-radius: unset;
+                    transition: 0.5s;
+                }
+
+                &.active,
+                &:hover {
+                    padding-left: 13px;
+                    color: hsl(var(--primary));
+
+                    &::before {
+                        opacity: 1;
+                        width: 10px;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .nav-link {
+                color: hsl(var(--primary));
+            }
+
+            .dropdown-menu {
+                transition: 0.5s;
+                opacity: 1;
+
+                @media all and (min-width: 991.98px) {
+                    visibility: visible;
+                    top: 100%;
+                    transform: rotateX(0deg);
+                }
+            }
+        }
+
+    }
+}
